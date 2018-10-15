@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Resource;
 use App\Jobs\DownloadFiles;
 use App\Http\Resources\ResourceResource;
@@ -48,9 +49,9 @@ class ResourceController extends Controller
         try {
             $resource = Resource::add($request->all());
             
-        } catch (\Throwable $th) {
+        } catch (Exception $exception) {
 
-            Log::error('error create resource: '.$request['url']);
+            Log::error('error create resource: '.$request['url']. ' - '. $exception);
 
             $returnData = array(
                 'status' => 'error',

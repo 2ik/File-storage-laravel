@@ -53,8 +53,8 @@ class File extends Model
         
         try {
             Storage::disk('local')->put($folder.$file_name, self::get_url($url_with_redirect));
-        } catch (\Throwable $th) {
-            Log::error('failed to load file: '.$url);
+        } catch (Exception $exception) {
+            Log::error('failed to load file: '.$url. ' - '. $exception);
             return False;
         }
 
