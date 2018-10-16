@@ -1,3 +1,11 @@
+**STEPS:**
+
+`git clone https://github.com/2ik/File-storage-laravel.git`
+
+`php artisan storage:link`
+
+`php artisan queue:work`
+
 # API DOCUMENTATION
 
 **Resource:**
