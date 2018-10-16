@@ -1,3 +1,5 @@
+![screenshot](http://i.prntscr.com/q6mhvxxySDOhdMXeTJkAiA.png)
+
 **STEPS:**
 
 `git clone https://github.com/2ik/File-storage-laravel.git`
