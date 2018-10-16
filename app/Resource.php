@@ -2,7 +2,6 @@
 
 namespace App;
 
-use App\File;
 use Illuminate\Database\Eloquent\Model;
 
 class Resource extends Model
