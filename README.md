@@ -2,9 +2,14 @@
 
 `git clone https://github.com/2ik/File-storage-laravel.git`
 
+`php artisan migrate`
+
 `php artisan storage:link`
 
 `php artisan queue:work`
+
+`php artisan serve`
+
 
 # API DOCUMENTATION
 
@@ -34,6 +39,6 @@ PARAM||
 
 Command | Description
 |--|--|
-`link:filch {url}` | `Download file in local storage`
-`link:file {id}` | `Generates a link based on id`
-`link:list [--status]` | `List all link with all statuses --status=(pending/downloading/complete/error)`
+`php artisan link:filch {url}` | `Download file in local storage`
+`php artisan link:file {id}` | `Generates a link based on id`
+`php artisan link:list [--status]` | `List all link with all statuses --status=(pending/downloading/complete/error)`
