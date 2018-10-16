@@ -2,6 +2,8 @@
 
 `git clone https://github.com/2ik/File-storage-laravel.git`
 
+`composer install`
+
 `php artisan migrate`
 
 `php artisan storage:link`
