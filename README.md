@@ -34,6 +34,6 @@ PARAM||
 
 Command | Description
 |--|--|
-`link:filch` | `Download file in local storage`
-`link:file` | `Generates a link based on id`
-`link:list` | `List all link with all statuses --status=(pending/downloading/complete/error)`
+`link:filch {url}` | `Download file in local storage`
+`link:file {id}` | `Generates a link based on id`
+`link:list [--status]` | `List all link with all statuses --status=(pending/downloading/complete/error)`
