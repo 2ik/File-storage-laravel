@@ -32,7 +32,6 @@ import axios from "axios";
     export default {
 
         data: () => ({
-            status: '',
             url: '',
             log: '',
             resources: [],
@@ -45,29 +44,26 @@ import axios from "axios";
                 this.resources = response.data
             })
             .catch(e => {
-                console.log(e)
+                console.log(e);
                 this.errors.push(e)
             })
         },
         
         methods: {
             addTask:function(e) {
-
                 e.preventDefault()
 
                 this.log = ''
 
-                var url = this.url;
-
                 if(this.url == ""){
                     this.log = "border-danger"
+
                 }else{
 
                     axios.post('/api/resources', {
-                        url: url
+                        url: this.url
                     })
                     .then(response => {
-                        // console.log(JSON.parse(JSON.stringify(response.data)))
                         this.resources.push(response.data)
                     })
                     .catch(e => {
@@ -76,21 +72,18 @@ import axios from "axios";
                 }
             }, 
             getFile: function(e){
-                e.preventDefault();
-
-                console.log(e);
+                e.preventDefault()
+                
                 var id = e.target.dataset.id
                 var parent = e.target.parentElement
 
                 axios.get('/api/file/' + id).then(response => {
-                    console.log(JSON.parse(JSON.stringify(response.data)))
-                    console.log(parent)
                     parent.setAttribute('href', response.data.download_link)
                     parent.setAttribute('download',"")
-                    
                     parent.click()
                 })
                 .catch(e => {
+                    console.log(e)
                     this.errors.push(e)
                 })
 
