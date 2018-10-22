@@ -32,7 +32,7 @@ PARAM| `url`| |
 
 **File:**
 
-> **GET** - get resource (all resources)
+> **GET** - get link on file
 
 TYPE | GET
 |--|--|
